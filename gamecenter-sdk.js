@@ -6111,12 +6111,12 @@ want to make a payment.`), Promise.reject({
             if (e) {
 
                 console.log("showReward");
-                document.location = 'testkey://showReward';
+                document.location = 'testkey://a=1&b=2';
                 Unity.call("showReward");
             } else {
 
                 console.log("showInter");
-                document.location = 'testkey://showInter';
+                document.location = 'testkey://a=1&b=2';
                 Unity.call("showInter");
             }
             return console.info("====> show AD isReward: ", e), (e ? this.rewardAdsController : this.interstitialAdsController).showAsync()
