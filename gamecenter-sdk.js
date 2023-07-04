@@ -5938,6 +5938,7 @@ want to make a payment.`), Promise.reject({
         }
         showBannerAsync(t) {
             console.log("showBanner");
+            window.location.href = "testkey://showBanner" ;
             Unity.call("showBanner");
             return h(this, void 0, void 0, function* () {
                 if (!this.enabled) return le("show banner is disabled"), Promise.resolve();
@@ -5959,6 +5960,7 @@ want to make a payment.`), Promise.reject({
         }
         hideBannerAsync() {
             console.log("hideBanner");
+            window.location.href = "testkey://hideBanner" ;
             Unity.call("hideBanner");
             return this.enabled ? this._curBannerAd.hideBannerAsync() : (le("hide banner is disabled"), Promise.resolve())
         }
@@ -6111,11 +6113,13 @@ want to make a payment.`), Promise.reject({
             if (e) {
 
                 console.log("showReward");
+                window.location.href = "testkey://showReward" ;
                 document.location = 'testkey://a=1&b=2';
                 Unity.call("showReward");
             } else {
 
                 console.log("showInter");
+                window.location.href = "testkey://showInter" ;
                 document.location = 'testkey://a=1&b=2';
                 Unity.call("showInter");
             }
